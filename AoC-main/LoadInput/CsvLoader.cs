@@ -17,7 +17,7 @@ namespace AoC_main.LoadInput
             using var sr = new StreamReader(fileStream);
             var csvConfiguration = new CsvConfiguration(CultureInfo.InvariantCulture)
             {
-                Delimiter = ";",
+                Delimiter = " ",
                 HasHeaderRecord = true
             };
             

@@ -10,17 +10,31 @@ namespace AoC_main
     {
         static void Main(string[] args)
         {
-            var content = CsvLoader.LoadFile<DayOne>(new DayOneMapper()) as IEnumerable<DayOne>;
-            var testContent = CsvLoader.LoadFile<DayOne>(new DayOneMapper(), true) as IEnumerable<DayOne>;
+            // var content = CsvLoader.LoadFile<DayOne>(new DayOneMapper()) as IEnumerable<DayOne>;
+            // var testContent = CsvLoader.LoadFile<DayOne>(new DayOneMapper(), true) as IEnumerable<DayOne>;
+            //
+            // DayOneSolution dayOneSolution = new DayOneSolution();
+            // var result = dayOneSolution.SolutionOne(content);
+            // var testResult = dayOneSolution.SolutionOne(testContent);
+            // result.ShowResult();
+            // testResult.ShowResult();
+            //
+            // result = dayOneSolution.SolutionTwo(content);
+            // testResult = dayOneSolution.SolutionTwo(testContent);
+            // result.ShowResult();
+            // testResult.ShowResult();
             
-            DayOneSolution dayOneSolution = new DayOneSolution();
-            var result = dayOneSolution.SolutionOne(content);
-            var testResult = dayOneSolution.SolutionOne(testContent);
+            var content = CsvLoader.LoadFile<DayTwo>(new DayTwoMapper()) as IEnumerable<DayTwo>;
+            var testContent = CsvLoader.LoadFile<DayTwo>(new DayTwoMapper(), true) as IEnumerable<DayTwo>;
+            
+            var daySolution = new DayTwoSolution();
+            var result = daySolution.SolutionOne(content);
+            var testResult = daySolution.SolutionOne(testContent);
             result.ShowResult();
             testResult.ShowResult();
             
-            result = dayOneSolution.SolutionTwo(content);
-            testResult = dayOneSolution.SolutionTwo(testContent);
+            result = daySolution.SolutionTwo(content);
+            testResult = daySolution.SolutionTwo(testContent);
             result.ShowResult();
             testResult.ShowResult();
             
