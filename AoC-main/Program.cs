@@ -24,10 +24,25 @@ namespace AoC_main
             // result.ShowResult();
             // testResult.ShowResult();
             
-            var content = CsvLoader.LoadFile<DayTwo>(new DayTwoMapper()) as IEnumerable<DayTwo>;
-            var testContent = CsvLoader.LoadFile<DayTwo>(new DayTwoMapper(), true) as IEnumerable<DayTwo>;
+            // var content = CsvLoader.LoadFile<DayTwo>(new DayTwoMapper()) as IEnumerable<DayTwo>;
+            // var testContent = CsvLoader.LoadFile<DayTwo>(new DayTwoMapper(), true) as IEnumerable<DayTwo>;
+            //
+            // var daySolution = new DayTwoSolution();
+            // var result = daySolution.SolutionOne(content);
+            // var testResult = daySolution.SolutionOne(testContent);
+            // result.ShowResult();
+            // testResult.ShowResult();
+            //
+            // result = daySolution.SolutionTwo(content);
+            // testResult = daySolution.SolutionTwo(testContent);
+            // result.ShowResult();
+            // testResult.ShowResult();
+            //
+            //
+            var content = CsvLoader.LoadFile<DayThree>(new DayThreeMapper()) as IEnumerable<DayThree>;
+            var testContent = CsvLoader.LoadFile<DayThree>(new DayThreeMapper(), true) as IEnumerable<DayThree>;
             
-            var daySolution = new DayTwoSolution();
+            var daySolution = new DayThreeSolution();
             var result = daySolution.SolutionOne(content);
             var testResult = daySolution.SolutionOne(testContent);
             result.ShowResult();
@@ -37,7 +52,7 @@ namespace AoC_main
             testResult = daySolution.SolutionTwo(testContent);
             result.ShowResult();
             testResult.ShowResult();
-            
+
         }
     }
 }
