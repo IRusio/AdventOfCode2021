@@ -12,7 +12,7 @@ namespace AoC_main.LoadInput
     {
         public static IEnumerable<IRawData> LoadFile<T>(ClassMap<T> mapper, bool isTest = false) where T: IRawData
         {
-            var basePath = "C:/private/repos/AdentOfCode2021/AoC-main";
+            var basePath = "C:/repos/AdventOfCode2021/AoC-main";
             var fileStream = File.OpenRead($"{basePath}/raw/{typeof(T).Name}{(isTest?"Test":"")}.csv");
             using var sr = new StreamReader(fileStream);
             var csvConfiguration = new CsvConfiguration(CultureInfo.InvariantCulture)
