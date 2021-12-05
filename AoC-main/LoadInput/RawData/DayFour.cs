@@ -4,8 +4,8 @@ namespace AoC_main.LoadInput.RawData
 {
     public class DayFour : IRawData
     {
-        public IEnumerable<int> WinningNumbers;
-        public List<DayFourBoardPoint[][]> GameBoards = new();
+        public IEnumerable<int> WinningNumbers { get; set; }
+        public List<DayFourBoardPoint[][]> GameBoards { get; set; }= new();
     }
 
     public class DayFourBoardPoint

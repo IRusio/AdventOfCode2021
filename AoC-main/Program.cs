@@ -11,63 +11,17 @@ namespace AoC_main
     {
         static void Main(string[] args)
         {
-            // var content = CsvLoader.LoadFile<DayOne>(new DayOneMapper()) as IEnumerable<DayOne>;
-            // var testContent = CsvLoader.LoadFile<DayOne>(new DayOneMapper(), true) as IEnumerable<DayOne>;
-            //
-            // DayOneSolution dayOneSolution = new DayOneSolution();
-            // var result = dayOneSolution.SolutionOne(content);
-            // var testResult = dayOneSolution.SolutionOne(testContent);
-            // result.ShowResult();
-            // testResult.ShowResult();
-            //
-            // result = dayOneSolution.SolutionTwo(content);
-            // testResult = dayOneSolution.SolutionTwo(testContent);
-            // result.ShowResult();
-            // testResult.ShowResult();
+            var dayOne = new DailyTaskRunner<DayOne, DayOneSolution>(new DayOneMapper(), new DayOneSolution());
+            dayOne.RunDailyTask();
             
-            // var content = CsvLoader.LoadFile<DayTwo>(new DayTwoMapper()) as IEnumerable<DayTwo>;
-            // var testContent = CsvLoader.LoadFile<DayTwo>(new DayTwoMapper(), true) as IEnumerable<DayTwo>;
-            //
-            // var daySolution = new DayTwoSolution();
-            // var result = daySolution.SolutionOne(content);
-            // var testResult = daySolution.SolutionOne(testContent);
-            // result.ShowResult();
-            // testResult.ShowResult();
-            //
-            // result = daySolution.SolutionTwo(content);
-            // testResult = daySolution.SolutionTwo(testContent);
-            // result.ShowResult();
-            // testResult.ShowResult();
-            //
-            //
-            // var content = CsvLoader.LoadFile<DayThree>(new DayThreeMapper()) as IEnumerable<DayThree>;
-            // var testContent = CsvLoader.LoadFile<DayThree>(new DayThreeMapper(), true) as IEnumerable<DayThree>;
-            //
-            // var daySolution = new DayThreeSolution();
-            // var result = daySolution.SolutionOne(content);
-            // var testResult = daySolution.SolutionOne(testContent);
-            // result.ShowResult();
-            // testResult.ShowResult();
-            //
-            // result = daySolution.SolutionTwo(content);
-            // testResult = daySolution.SolutionTwo(testContent);
-            // result.ShowResult();
-            // testResult.ShowResult();
-
-            var content = RawStringLoader.LoadFile<DayFour>(new DayFourMapper());
-            var testContent = RawStringLoader.LoadFile<DayFour>(new DayFourMapper(), true);
+            var dayTwo = new DailyTaskRunner<DayTwo, DayTwoSolution>(new DayTwoMapper(), new DayTwoSolution());
+            dayTwo.RunDailyTask();
             
-            var daySolution = new DayFourSolution();
-            var result = daySolution.SolutionOne(content.Select(x=>x as DayFour));
-            var testResult = daySolution.SolutionOne(testContent.Select(x=>x as DayFour));
-            result.ShowResult();
-            testResult.ShowResult();
+            var dayThree = new DailyTaskRunner<DayThree, DayThreeSolution>(new DayThreeMapper(), new DayThreeSolution());
+            dayThree.RunDailyTask();
             
-            result = daySolution.SolutionTwo(content.Select(x=>x as DayFour));
-            testResult = daySolution.SolutionTwo(testContent.Select(x=>x as DayFour));
-            result.ShowResult();
-            testResult.ShowResult();
-            
+            var dayFour = new DailyTaskRunner<DayFour, DayFourSolution>(new DayFourMapper(), new DayFourSolution());
+            dayFour.RunDailyTask();
         }
     }
 }

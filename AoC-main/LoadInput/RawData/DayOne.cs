@@ -4,6 +4,6 @@ namespace AoC_main.LoadInput.RawData
 {
     public class DayOne : IRawData
     {
-        public int Depth;
+        public int Depth { get; set; }
     }
 }
