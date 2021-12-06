@@ -10,14 +10,14 @@ namespace AoC_main.LoadInput
 {
     public class CsvLoader
     {
-        public static IEnumerable<IRawData> LoadFile<T>(ClassMap<T> mapper, bool isTest = false) where T: IRawData
+        public static IEnumerable<IRawData> LoadFile<T>(ClassMap<T> mapper, bool isTest = false, string delimiter = " ") where T: IRawData
         {
             var basePath = "C:/repos/AdventOfCode2021/AoC-main";
             var fileStream = File.OpenRead($"{basePath}/raw/{typeof(T).Name}{(isTest?"Test":"")}.csv");
             using var sr = new StreamReader(fileStream);
             var csvConfiguration = new CsvConfiguration(CultureInfo.InvariantCulture)
             {
-                Delimiter = " ",
+                Delimiter = delimiter,
                 HasHeaderRecord = true
             };
             

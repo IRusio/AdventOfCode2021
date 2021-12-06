@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using AoC_main.LoadInput;
 using AoC_main.LoadInput.RawData;
 using AoC_main.Solutions;
@@ -22,6 +20,9 @@ namespace AoC_main
             
             var dayFour = new DailyTaskRunner<DayFour, DayFourSolution>(new DayFourMapper(), new DayFourSolution());
             dayFour.RunDailyTask();
+            
+            var dayFive = new DailyTaskRunner<DayFive, DayFiveSolution>(new DayFiveMapper(), new DayFiveSolution(), " -> ");
+            dayFive.RunDailyTask();
         }
     }
 }

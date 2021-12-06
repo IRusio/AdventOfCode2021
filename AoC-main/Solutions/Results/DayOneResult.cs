@@ -4,7 +4,7 @@ namespace AoC_main.Solutions.Results
 {
     public class DayOneResult : IResult
     {
-        public int Difference;
+        public int Difference { get; set; }
 
         public void ShowResult()
         {

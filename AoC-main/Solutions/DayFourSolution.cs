@@ -2,6 +2,7 @@
 using System.Linq;
 using AoC_main.LoadInput;
 using AoC_main.LoadInput.RawData;
+using AoC_main.Solutions.Results;
 
 namespace AoC_main.Solutions
 {

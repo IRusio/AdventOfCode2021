@@ -20,11 +20,11 @@ namespace AoC_main.Solutions
             TestContent = RawStringLoader.LoadFile(mapper, true).Select(x=>(T)x);
         }
 
-        public DailyTaskRunner(ClassMap<T> mapper, Solution solution)
+        public DailyTaskRunner(ClassMap<T> mapper, Solution solution, string delimiter = " ")
         {
             DaySolution = solution;
-            Content = (IEnumerable<T>)CsvLoader.LoadFile(mapper);
-            TestContent = (IEnumerable<T>)CsvLoader.LoadFile(mapper, true);
+            Content = (IEnumerable<T>)CsvLoader.LoadFile(mapper, false, delimiter);
+            TestContent = (IEnumerable<T>)CsvLoader.LoadFile(mapper, true, delimiter);
         }
 
         public void RunDailyTask()
@@ -36,7 +36,7 @@ namespace AoC_main.Solutions
             result.ShowResult();
             testResult.ShowResult();
             
-            result = DaySolution.SolutionTwo(Content);
+           result = DaySolution.SolutionTwo(Content);
             testResult = DaySolution.SolutionTwo(TestContent);
             result.ShowResult();
             testResult.ShowResult();
