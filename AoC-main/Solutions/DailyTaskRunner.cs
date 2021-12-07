@@ -30,12 +30,14 @@ namespace AoC_main.Solutions
         public void RunDailyTask()
         {
             Console.WriteLine(typeof(T).Name);
-            
+
+            Console.WriteLine("Solution One");
             var result = DaySolution.SolutionOne(Content);
             var testResult = DaySolution.SolutionOne(TestContent);
             result.ShowResult();
             testResult.ShowResult();
-            
+
+            Console.WriteLine("Solution Two");
            result = DaySolution.SolutionTwo(Content);
             testResult = DaySolution.SolutionTwo(TestContent);
             result.ShowResult();
