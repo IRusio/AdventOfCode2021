@@ -27,9 +27,13 @@ namespace AoC_main
             // var daySix = new DailyTaskRunner<DaySix, DaySixSolution>(new DaySixMapper(), new DaySixSolution());
             // daySix.RunDailyTask();
 
-            var daySeven =
-                new DailyTaskRunner<DaySeven, DaySevenSolution>(new DaySevenMapper(), new DaySevenSolution());
-            daySeven.RunDailyTask();
+            // var daySeven =
+            //     new DailyTaskRunner<DaySeven, DaySevenSolution>(new DaySevenMapper(), new DaySevenSolution());
+            // daySeven.RunDailyTask();
+
+            var dayEight =
+                new DailyTaskRunner<DayEight, DayEightSolution>(new DayEightMapper(), new DayEightSolution());
+            dayEight.RunDailyTask();
         }
     }
 }
